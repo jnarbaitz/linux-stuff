@@ -1,0 +1,49 @@
+menu,
+.context-menu{
+box-shadow:none;
+font-weight:bold;
+padding:1px;
+background-color:shade(@bg_color,0.85);
+border:1px solid @border_color;}
+
+menu separator,
+menu separator:backdrop{
+margin-top:1px;
+margin-bottom:1px;}
+
+menu>menuitem{
+background-color:shade(@bg_color,0.85);
+padding:1px 0px;
+min-height:20px;}
+menu>menuitem:hover,
+menu>menuitem:backdrop:hover{
+background:@selected_bg_color;}
+menu:dir(ltr)>*{
+padding-left:3px;
+padding-right:2px;}
+menu:dir(rtl)>*{
+padding-left:2px;
+padding-right:3px;}
+window>menu>separator,
+window>menu>separator:backdrop{
+background-color:@border_color;}
+
+popover.background,
+popover.background:backdrop{
+box-shadow:none;
+padding:0px;
+background:shade(@bg_color,0.85);
+border:1px solid @border_color;}
+popover.background modelbutton{
+padding:2px 0px;
+font-weight:bold;}
+popover.background modelbutton:hover{
+background:@selected_base_color;}
+popover treeview.view:not(:hover):not(:selected),
+popover treeview.view:not(:hover):not(:selected):backdrop{
+background:@object_color;}
+popover entry,
+popover entry:backdrop,
+popover scrolledwindow,
+popover scrolledwindow:backdrop{
+margin:1px;}

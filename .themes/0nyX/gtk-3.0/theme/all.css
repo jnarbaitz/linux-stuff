@@ -1,0 +1,282 @@
+* {
+/*https://developer.gnome.org/gtk3/3.22/chap-css-properties.html */ 
+-GtkWidget-window-dragging:true;
+-GtkScrolledWindow-scrollbar-spacing:0;
+-GtkNotebook-has-backward-stepper:0;
+-GtkNotebook-has-forward-stepper:1;
+-GtkNotebook-has-secondary-backward-stepper:1;
+-GtkNotebook-has-secondary-forward-stepper:0;
+-GtkScrollbar-has-backward-stepper:1;
+-GtkScrollbar-has-forward-stepper:1;
+-GtkScrollbar-has-secondary-backward-stepper:0;
+-GtkScrollbar-has-secondary-forward-stepper:0;
+-GtkTextView-error-underline-color:@error_color;
+-GtkArrow-arrow-scaling:1;
+-GtkTreeView-horizontal-separator: 1;
+-GtkTreeView-grid-line-width: 1;
+-GtkTreeView-grid-line-pattern: '\01\01';
+-GtkTreeView-tree-line-width: 1;
+-GtkTreeView-tree-line-pattern: '\01\01';
+-GtkTreeView-expander-size: 16;
+-gtk-icon-shadow:none;
+/*symbolic icons are crap*/
+-gtk-icon-palette:success @success_color, warning @warning_color, error @error_color, info @info_color;
+-gtk-icon-style:regular;
+-gtk-icon-effect:none;
+transition:none;
+border:none;
+padding:0px;
+margin:0px;
+text-shadow:none;
+outline:0px;
+outline-offset:-1px;}
+
+label,
+label:backdrop{
+margin:1px 5px;}
+
+image,
+image:backdrop{
+margin:1px;}
+
+separator,
+separator:backdrop{
+min-height:1px;
+min-width:1px;
+border:none;
+color:transparent;
+background-clip: border-box;
+background-position: center;
+background-image:image(@border_color);
+background-size:1px 1px;}
+separator.horizontal,
+separator.horizontal:backdrop {
+min-height:1px;
+background-repeat:repeat-x;
+background-size:1px 1px;}
+separator.vertical,
+separator.vertical:backdrop{
+background-repeat:repeat-y;}
+paned.horizontal>separator,
+paned.horizontal>separator:backdrop {
+margin:0px 3px;}
+paned.vertical>separator,
+paned.vertical>separator:backdrop {
+margin:3px 0px;}
+
+toolbar separator,
+toolbar separator:backdrop,
+headerbar separator,
+headerbar separator:backdrop{
+opacity:0;}
+
+frame:only-child,
+entry:only-child,
+scale:only-child,
+switch:only-child,
+progressbar:only-child,
+notebook:only-child,
+*.frame:only-child,
+frame:only-child:backdrop,
+entry:only-child:backdrop,
+scale:only-child:backdrop,
+switch:only-child:backdrop,
+progressbar:only-child:backdrop,
+notebook:only-child:backdrop,
+*.frame:only-child:backdrop {
+margin:1px;}
+
+/*kill dragging*/
+window.background,
+paned,
+paned:backdrop,
+separator,
+separator:backdrop,
+scrolledwindow,
+scrolledwindow:backdrop,
+viewport,
+viewport:backdrop,
+calendar,
+calendar:backdrop,
+row,
+row:backdrop,
+list,
+list:backdrop,
+placessidebar,
+placessidebar:backdrop,
+.sidebar,
+.sidebar:backdrop,
+stackswitcher,
+stackswitcher:backdrop,
+vte-terminal,
+vte-terminal:backdrop
+image,
+image:backdrop,
+#xfce4-terminal-notebook,
+overlay,
+overlay:backdrop,
+button,
+button:backdrop,
+entry,
+entry:backdrop,
+switch,
+switch:backdrop,
+notebook>header,
+notebook>header:backdrop,
+#yad-color-widget,
+#yad-color-widget:backdrop,
+scrolledwindow *,
+scrolledwindow *:backdrop,
+#Emacs>box>box *,
+#Emacs>box>box *:backdrop{
+-GtkWidget-window-dragging:false;}
+
+image:disabled,
+image:disabled:backdrop{
+opacity:0.3;
+-gtk-icon-effect:dim;}
+
+.background,
+.background:backdrop,
+.titlebar,
+.titlebar:backdrop,
+.gtkstyle-fallback,
+.gtkstyle-fallback:backdrop{
+border:1px solid transparent;
+color:@fg_color;
+background:@bg_color;}
+
+.background:disabled,
+.background:disabled:backdrop,
+.titlebar:disabled,
+.titlebar:disabled:backdrop,
+.gtkstyle-fallback:disabled,
+.gtkstyle-fallback:disabled:backdrop,
+*:disabled,
+*:disabled:backdrop{
+color:@inactive_fg_color;}
+*:selected,
+*:selected:backdrop,
+label selection,
+text selection{
+color:@selected_fg_color;
+background:@selected_bg_color;}
+.background:selected:backdrop,
+.titlebar:selected:backdrop,
+.gtkstyle-fallback:selected:backdrop,
+label selection:backdrop,
+text selection:backdrop{
+color:@selected_fg_color;
+background:shade(@bg_color,1.3);}
+
+.view,
+.view:backdrop,
+list,
+list:backdrop{
+border-color:@base_color;
+color:@text_color;
+background:@base_color;}
+.view:disabled,
+.view:disabled:backdrop{
+border-color:@base_color;
+color:@inactive_text_color;}
+
+.view:selected,
+.view:selected:backdrop,
+list row:checked,
+list row:checked:backdrop{
+border-color:@selected_base_color;
+color:@selected_text_color;
+background:@selected_base_color;}
+.view:selected:backdrop,
+list row:checked:backdrop{
+border-color:shade(@base_color,1.3);;
+background:shade(@base_color,1.3);}
+
+iconview:selected,
+iconview:active,
+iconview:selected:backdrop,
+iconview:active:backdrop{
+border-radius:5px;}
+
+.link label,
+link{
+text-decoration:underline;
+color:@url_color;}
+.link:visited label,
+link:visited{
+color:@visited_url_color;}
+
+.dim-label,
+.dim-label:backdrop,
+.greyed-label,
+.greyed-label:backdrop {
+opacity:0.6;}
+.needs-attention,
+.counter-label {
+border-radius:2px;
+color:@selected_fg_color;
+background:@selected_bg_color;}
+
+.overshoot.top,
+.overshoot.top:backdrop,
+.overshoot.bottom,
+.overshoot.bottom:backdrop,
+.overshoot.left,
+.overshoot.left:backdrop,
+.overshoot.right,
+.overshoot.right:backdrop,
+.undershoot.top,
+.undershoot.top:backdrop,
+.undershoot.bottom,
+.undershoot.bottom:backdrop,
+.undershoot.left,
+.undershoot.left:backdrop,
+.undershoot.right,
+.undershoot.right:backdrop{
+background:transparent;
+border:none;
+box-shadow:none;}
+
+.rubberband,
+rubberband,
+.rubberband:backdrop,
+rubberband:backdrop{
+border:1px solid @selected_base_color;
+background:alpha(@selected_base_color,0.2);}
+
+cellview,
+cellview:backdrop{
+margin:0px 5px;}
+
+calendar,
+calendar:backdrop {
+color: @text_color;
+border: 1px solid @border_color;}
+
+row,
+row:backdrop {
+min-height:24px;}
+
+flowboxchild,
+flowboxchild:backdrop{
+background:transparent;}
+
+window>stack>*,
+window>grid>*,
+window>overlay>*,
+window>notebook,
+window>stack>*:backdrop,
+window>grid>*:backdrop,
+window>overlay>*:backdrop,
+window>notebook:backdrop{
+margin:3px;}
+
+window>grid>menubar,
+window>grid>menubar:backdrop{
+margin:0px;}
+
+window>frame>border,
+window>frame>border:backdrop {
+margin:0px;
+border:none;}

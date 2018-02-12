@@ -1,0 +1,82 @@
+scrollbar.vertical,
+scrollbar.vertical:backdrop {
+min-width:15px;
+min-height:60px;
+border:1px solid @border_color;
+background:shade(@base_color,0.8);}
+
+scrollbar.horizontal,
+scrollbar.horizontal:backdrop {
+min-width:60px;
+min-height:15px;
+border:1px solid @border_color;
+background:shade(@base_color,0.8);}
+
+scrollbar>contents>button,
+scrollbar>contents>button:checked,
+scrollbar>contents>button:backdrop{
+min-width:14px;
+min-height:14px;
+margin:1px;
+-gtk-icon-source:-gtk-scaled(url("images/arrow-down_normal.svg"),url("images/arrow-down_normal2.svg"));}
+scrollbar.vertical>contents>button.down,
+scrollbar.vertical>contents>button.down:backdrop{
+border:none;
+background-color:transparent;
+background-size:14px 14px;}
+scrollbar.vertical>contents>button.up,
+scrollbar.vertical>contents>button.up:backdrop{
+-gtk-icon-transform:rotate(0.5turn);
+border:none;
+background-color:transparent;
+background-size:14px 14px;}
+scrollbar.horizontal>contents>button.down,
+scrollbar.horizontal>contents>button.down:backdrop{
+-gtk-icon-transform:rotate(0.75turn);
+border:none;
+background-color:transparent;
+background-size: 14px 14px;}
+scrollbar.horizontal>contents>button.up,
+scrollbar.horizontal>contents>button.up:backdrop{
+-gtk-icon-transform:rotate(0.25turn);
+border:none;
+background-color:transparent;
+background-size:14px 14px;}
+
+scrollbar>contents>button:disabled,
+scrollbar>contents>button:disabled:backdrop{
+-gtk-icon-source:-gtk-scaled(url("images/arrow-down_insensitive.svg"),url("images/arrow-down_insensitive2.svg"));}
+
+scrollbar slider,
+scrollbar slider:backdrop{
+margin:-1px;
+min-width:16px;
+min-height:21px;
+background-color:@selected_bg_color;
+border:1px solid @border_color;}
+scrollbar.horizontal slider,
+scrollbar.horizontal slider:backdrop{
+margin:-1px;
+min-width:21px;
+min-height:16px;}
+scrolledwindow,
+scrolledwindow:backdrop,
+scrolledwindow.frame,
+scrolledwindow.frame:backdrop{
+margin:2px;
+border:1px solid @border_color;
+background:@base_color;}
+
+scrolledwindow>scrollbar.vertical:dir(ltr),
+scrolledwindow>scrollbar.vertical:dir(ltr):backdrop{
+margin:-1px -1px -1px -0px;}
+scrolledwindow.frame>scrollbar.vertical:dir(rtl),
+scrolledwindow.frame>scrollbar.vertical:dir(rtl):backdrop{
+margin:-1px 0px -1px -1px;}
+scrolledwindow.frame>scrollbar.horizontal,
+scrolledwindow.frame>scrollbar.horizontal:backdrop{
+margin:-0px -1px -1px -1px;}
+
+*.view scrolledwindow,
+*.view scrolledwindow:backdrop{
+margin:0px;}

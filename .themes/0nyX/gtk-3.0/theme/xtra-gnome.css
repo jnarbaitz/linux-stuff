@@ -1,0 +1,68 @@
+nautilus-desktop-window.nautilus-window notebook box grid scrolledwindow,
+nautilus-desktop-window.nautilus-window notebook box grid scrolledwindow:backdrop{
+border:none;
+background-color:transparent;}
+
+.nautilus-window notebook>stack scrolledwindow,
+.nautilus-window notebook>stack scrolledwindow:backdrop{
+background:@base_color;
+border:1px solid @border_color;
+margin:2px;}
+
+.nautilus-window headerbar box .linked.path-bar button.text-button,
+.nautilus-window headerbar box .linked.path-bar button.toggle,
+.nautilus-window headerbar box .linked.path-bar button.text-button:backdrop,
+.nautilus-window headerbar box .linked.path-bar button.toggle:backdrop{
+border-color:transparent;
+background:transparent;
+border-bottom: 2px solid transparent;}
+.nautilus-window headerbar box .linked.path-bar .text-button:checked,
+.nautilus-window headerbar box .linked.path-bar .text-button:checked:backdrop,
+.nautilus-window headerbar box .linked.path-bar button:checked:not(.image-button),
+.nautilus-window headerbar box .linked.path-bar button:checked:not(.image-button):backdrop {
+border-bottom: 2px solid @selected_bg_color}
+.nautilus-window headerbar box .linked.path-bar button.slider-button,
+.nautilus-window headerbar box .linked.path-bar button.slider-button:checked,
+.nautilus-window headerbar box .linked.path-bar button.slider-button:backdrop,
+.nautilus-window headerbar box .linked.path-bar button.slider-button:checked:backdrop{
+border-color:transparent;
+background:transparent;}
+
+.terminator-terminal-window paned>separator,
+.terminator-terminal-window paned>separator:backdrop {
+padding:0px;
+margin:0px;
+background:@base_color;}
+.terminator-terminal-window scrollbar,
+.terminator-terminal-window scrollbar:backdrop{
+-GtkScrollbar-has-backward-stepper:0;
+-GtkScrollbar-has-forward-stepper:0;
+-GtkScrollbar-has-secondary-backward-stepper:0;
+-GtkScrollbar-has-secondary-forward-stepper:0;
+margin:-1px;}
+.terminator-terminal-window scrollbar.vertical,
+.terminator-terminal-window scrollbar.vertical:backdrop {
+min-width:10px;}
+.terminator-terminal-window scrollbar.vertical slider,
+.terminator-terminal-window scrollbar.vertical slider:backdrop{
+margin:-1px;
+min-width:10px;
+min-height:21px;
+background-color:@selected_bg_color;
+border:1px solid @border_color;}
+.terminator-terminal-window viewport.frame label,
+.terminator-terminal-window viewport.frame label:backdrop  {
+font-weight:bold;}
+
+/*a really ugly fix for brasero*/
+window.background>box.vertical>notebook>stack>box.vertical>paned.horizontal>box.vertical>box.vertical>notebook>stack>frame>widget,
+window.background>box.vertical>notebook>stack>box.vertical>paned.horizontal>box.vertical>box.vertical>notebook>stack>frame>widget:backdrop {
+background:@base_color;}
+
+terminal-window menubar,
+terminal-window menubar:backdrop{
+border-bottom:1px solid @border_color;}
+
+terminal-window terminal-screen-container scrollbar,
+terminal-window terminal-screen-container scrollbar:backdrop{
+margin:-1px;}
